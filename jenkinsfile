@@ -1,8 +1,8 @@
 pipeline {
    agent any
-    tools {
+    /*tools {
         maven 'apache-maven-3.6.1'
-    }
+    }*/
    options {
         timeout(time: 1, unit: 'HOURS') 
     }
@@ -60,11 +60,11 @@ pipeline {
                 echo "Hello, ${PERSON}, nice to meet you."
             }
          }
-        stage('Maven stage') {
+       /* stage('Maven stage') {
             steps {
                 sh 'mvn --version'
             }
-        }
+        }*/
     }
 
     post { 
