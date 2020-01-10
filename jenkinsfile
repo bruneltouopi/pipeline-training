@@ -6,7 +6,8 @@ pipeline {
     }
    }
     tools {
-        maven 'apache-maven-3.6.1' 
+        maven 'apache-maven-3.6.1'
+        docker 'docker' 
     }
    options {
         timeout(time: 1, unit: 'HOURS') 
