@@ -1,5 +1,8 @@
 pipeline {
    agent any
+    tools {
+        maven 'apache-maven-3.0.1' 
+    }
    options {
         timeout(time: 1, unit: 'HOURS') 
     }
@@ -42,6 +45,11 @@ pipeline {
                 echo "Choice: ${params.CHOICE}"
 
                 echo "Password: ${params.PASSWORD}"
+            }
+        }
+        stage('Maven stage') {
+            steps {
+                sh 'mvn --version'
             }
         }
     }
